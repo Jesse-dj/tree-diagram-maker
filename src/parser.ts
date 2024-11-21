@@ -47,11 +47,3 @@ function sanitize(line: string): string {
 }
 
 export { createFolderTree }
-
-type FileSystemItemType = "file" | "folder"
-
-interface FileSystemItem {
-  name: string;
-  type: FileSystemItemType;
-  children: FileSystemItem[];
-}
