@@ -1,0 +1,39 @@
+{
+  "name": "tree-diagram",
+  "private": true,
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "test": "vitest",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.13.0",
+    "@types/downloadjs": "^1.4.6",
+    "@types/lodash.debounce": "^4.0.9",
+    "eslint": "^9.13.0",
+    "globals": "^15.11.0",
+    "typescript": "~5.6.2",
+    "typescript-eslint": "^8.12.2",
+    "vite": "^5.4.9",
+    "vitest": "^2.1.4"
+  },
+  "dependencies": {
+    "@codemirror/autocomplete": "^6.18.1",
+    "@codemirror/commands": "^6.7.1",
+    "@codemirror/lang-javascript": "^6.2.2",
+    "@codemirror/lang-markdown": "^6.3.0",
+    "@codemirror/lang-yaml": "^6.1.1",
+    "@codemirror/language": "^6.10.3",
+    "@codemirror/lint": "^6.8.2",
+    "@codemirror/search": "^6.5.6",
+    "@codemirror/state": "^6.4.1",
+    "@codemirror/view": "^6.34.1",
+    "codemirror": "^6.0.1",
+    "downloadjs": "^1.4.7",
+    "html-to-image": "^1.11.11",
+    "lodash.debounce": "^4.0.8"
+  }
+}

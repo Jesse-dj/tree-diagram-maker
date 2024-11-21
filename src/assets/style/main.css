@@ -1,0 +1,151 @@
+@import './button.css';
+@import './dropdown.css';
+@import './toast.css';
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --main-padding: 8px;
+}
+
+body {
+  margin: 0;
+  place-items: center;
+  min-width: 320px;
+  max-height: 100%;
+}
+
+#app {
+  display: flex;
+}
+
+.editor-container {
+  min-height: 100%;
+  flex:2;
+}
+
+#editor {
+  height: 100%;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 0px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+#output {
+  color: #1a1a1a;
+  background-color: white;
+
+  height: calc(100vh - 60px);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 0px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+.output-container{
+  flex:1;
+
+  border:#888 groove 3px;
+}
+
+.cm-editor {
+  flex: 1; /* Make the editor take up the remaining space */
+  height: 100%; /* Ensure it fills the container */
+  overflow: auto; /* Add scrolling if necessary */
+
+  background-color: #242424;
+}
+.cm-scroller { overflow: auto; }
+.cm-gutter{
+  background-color: #242424;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: var(--main-padding);
+  background-color: #1a1a1a;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+/* Base styling */
+.folder-tree ul {
+  list-style-type: none;
+  padding-left: 20px;
+  margin: 0;
+}
+
+.folder-tree li {
+  position: relative;
+  padding-left: 10px;
+  line-height: 1.5em;
+  cursor: pointer;
+}
+
+.folder-tree .text {
+  margin-left: 14px;
+}
+
+/* Folder icon */
+.folder-tree .folder::before {
+  content: "📂";           /* Folder emoji (or use an icon if preferred) */
+  position: absolute;
+  left: 0;
+  color: #ffb300;          /* Folder icon color */
+}
+
+/* File icon */
+.folder-tree .file::before {
+  content: "📄";           /* File emoji (or use an icon if preferred) */
+  position: absolute;
+  left: 0;
+  color: #888;             /* File icon color */
+}
+
+/* Hover effect for folder and file items */
+/* .folder-tree li:hover {
+  background-color: #f0f0f0;
+  border-radius: 3px;
+} */
+
+/* Optional: Additional indentation for nested lists */
+.folder-tree ul ul {
+  padding-left: 0px;
+  
+  border-left: solid 0.5px #242424;
+}
+
+/* Optional: Add expand/collapse toggle on folder click */
+.folder-tree .folder.collapsed > ul {
+    display: none; /* Hide nested items when folder is collapsed */
+}
+
+/* Pointer icon for clickable folders */
+.folder-tree .folder {
+    cursor: pointer;
+}
+
+.muted {
+   opacity: 0.5;
+}

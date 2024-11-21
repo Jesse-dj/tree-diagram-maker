@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tree Diagram</title>
+  </head>
+  <body>
+    <header>
+      <div id="logo">
+        <a href="#" rel="home">Tree Diagram</a>
+        <i class="muted">Sometimes you just wanna create a simple folder diagram, am I right?</i>
+      </div>
+      <!-- <select name="mode" id="" title="mode">
+        <option value="ascii">ASCII</option>
+      </select> -->
+      <div id="actions">
+        <button type="button" id="copy-btn">🖨️ Copy</button>
+        <!-- <button type="button" id="export-btn">Export</button> -->
+        <div class="dropdown">
+          <button type="button" class="dropdown-button">📦 Export</button>
+          <div class="dropdown-content">
+              <a href="#" id="export-png" >As PNG</a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main id="app">
+      <div class="editor-container">
+        <div id="editor"></div>
+      </div>
+      <div class="output-container">
+        <div id="output"></div>
+      </div>
+    </main>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
